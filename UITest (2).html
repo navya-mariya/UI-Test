@@ -1,0 +1,438 @@
+<HTML>
+<HEAD>
+<TITLE>
+UI TEST
+</TITLE>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<style>
+.container {
+  text-align: center;
+  overflow: hidden;
+  width: 800px;
+  margin: 0 auto;
+ padding-top: 30px;
+}
+.button1
+{
+width:100%;
+height:35px;
+background-color:  #c2d6d6;
+}
+.main
+{
+}
+.next:disabled,.next[disabled]{
+
+    background-color: #cccccc;
+    cursor:not-allowed !important;
+    color: #grey;
+  }
+  
+.next
+{
+ background-color:  #006600;
+ //padding-top:40px ;
+ margin-left: 70px;
+ text-align:center ;
+  color: #fff;
+ width: 200px;
+ height: 35px;
+ margin-bottom:20px ;
+ 
+}
+div#fixedheader {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  color:#fff;
+  background:#fff;
+  padding:25px;
+  border: 2px;
+
+}
+div#fixedfooter {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  height:80px ;
+  color:#fff;
+  background:#fff;
+  padding:8px;
+  border: 2px;
+}
+.black
+{
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  height:18px;
+
+  color:#fff;
+  background:#000;
+  //padding:8px;
+  //border: 2px;
+}
+
+
+.p1{
+ font-size: 16px;
+//font-weight: bold;
+}
+table
+{
+
+text-align: center;
+}
+td{
+padding: 0px;
+       width: 10%; 
+ }
+.arrow_button_right{
+      width: 100%;
+      height: 35px;
+      clip-path: polygon(0% 0%, 80% 0, 100% 50%, 80% 100%, 0% 100%);
+      background-color: #c2d6d6;
+   
+      padding: 0.2rem 2rem;
+      border: 0px;
+}
+.arrow_button_left{
+
+      width: 100%;
+      height: 35px;
+      clip-path: polygon( 20% 100%,100% 100%,100% 0%,20% 0%,0% 50%);
+      background-color:  #c2d6d6;
+    
+      padding: 0.2rem 2rem;
+      border: 0px;
+}
+</style>
+<script>
+var flag=0,flag1=0;flag3=0;flag2=0;
+var result="",reult2="",result3="",result4="";
+var arr=new array();
+function clic(a)
+{
+flag=1;
+if(a==1)
+{
+
+document.getElementById("bt1").style.backgroundColor =  "#ff0000";
+document.getElementById("bt2").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt3").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt4").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt5").style.backgroundColor = "#c2d6d6";
+result1=bt1;
+}
+else if(a==2)
+{
+  result1=bt2;
+document.getElementById("bt1").style.backgroundColor = " #ff3300";
+document.getElementById("bt2").style.backgroundColor = " #ff3300";
+document.getElementById("bt3").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt4").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt5").style.backgroundColor = "#c2d6d6";
+}
+else if(a==3)
+{
+result1=bt3;
+document.getElementById("bt1").style.backgroundColor ="#ff9900";
+document.getElementById("bt2").style.backgroundColor = "#ff9900";
+document.getElementById("bt3").style.backgroundColor = "#ff9900";
+document.getElementById("bt4").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt5").style.backgroundColor = "#c2d6d6";
+}
+else if(a==4)
+{
+  result1=bt4;
+document.getElementById("bt1").style.backgroundColor = "#00b300";
+document.getElementById("bt2").style.backgroundColor = "#00b300";
+document.getElementById("bt3").style.backgroundColor = "#00b300";
+document.getElementById("bt4").style.backgroundColor = "#00b300";
+document.getElementById("bt5").style.backgroundColor = "#c2d6d6";
+}
+else
+{
+document.getElementById("bt1").style.backgroundColor = "#004d00";
+document.getElementById("bt2").style.backgroundColor = "#004d00";
+document.getElementById("bt3").style.backgroundColor = "#004d00";
+document.getElementById("bt4").style.backgroundColor = "#004d00";
+document.getElementById("bt5").style.backgroundColor = "#004d00";
+result1=bt5;
+}
+if((flag&&flag1&&flag2&&flag3)==1)
+{
+  enable();
+}
+
+
+
+
+}
+
+
+
+function clic1(a)
+{
+  flag1=1;
+if(a==1)
+{
+  result2=bt11;
+document.getElementById("bt11").style.backgroundColor =  "#ff0000";
+document.getElementById("bt22").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt33").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt44").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt55").style.backgroundColor = "#c2d6d6";
+}
+else if(a==2)
+{
+   result2=bt22;
+document.getElementById("bt11").style.backgroundColor = " #ff3300";
+document.getElementById("bt22").style.backgroundColor = " #ff3300";
+document.getElementById("bt33").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt44").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt55").style.backgroundColor = "#c2d6d6";
+}
+else if(a==3)
+{
+ result2=bt33;
+document.getElementById("bt11").style.backgroundColor ="#ff9900";
+document.getElementById("bt22").style.backgroundColor = "#ff9900";
+document.getElementById("bt33").style.backgroundColor = "#ff9900";
+document.getElementById("bt44").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt55").style.backgroundColor = "#c2d6d6";
+}
+else if(a==4)
+{
+   result2=bt44;
+document.getElementById("bt11").style.backgroundColor = "#00b300";
+document.getElementById("bt22").style.backgroundColor = "#00b300";
+document.getElementById("bt33").style.backgroundColor = "#00b300";
+document.getElementById("bt44").style.backgroundColor = "#00b300";
+document.getElementById("bt55").style.backgroundColor = "#c2d6d6";
+}
+else
+{
+   result2=bt55;
+document.getElementById("bt11").style.backgroundColor = "#004d00";
+document.getElementById("bt22").style.backgroundColor = "#004d00";
+document.getElementById("bt33").style.backgroundColor = "#004d00";
+document.getElementById("bt44").style.backgroundColor = "#004d00";
+document.getElementById("bt55").style.backgroundColor = "#004d00";
+}
+}
+function clic2(a)
+{
+  flag3=1;
+if(a==1)
+{
+   result3=bt111;
+document.getElementById("bt111").style.backgroundColor =  "#ff0000";
+document.getElementById("bt222").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt333").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt444").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt555").style.backgroundColor = "#c2d6d6";
+}
+else if(a==2)
+{
+  result3=bt222;
+document.getElementById("bt111").style.backgroundColor = " #ff3300";
+document.getElementById("bt222").style.backgroundColor = " #ff3300";
+document.getElementById("bt333").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt444").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt555").style.backgroundColor = "#c2d6d6";
+}
+else if(a==3)
+{
+result3=bt333;
+document.getElementById("bt111").style.backgroundColor ="#ff9900";
+document.getElementById("bt222").style.backgroundColor = "#ff9900";
+document.getElementById("bt333").style.backgroundColor = "#ff9900";
+document.getElementById("bt444").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt555").style.backgroundColor = "#c2d6d6";
+}
+else if(a==4)
+{
+  result3=bt444;
+document.getElementById("bt111").style.backgroundColor = "#00b300";
+document.getElementById("bt222").style.backgroundColor = "#00b300";
+document.getElementById("bt333").style.backgroundColor = "#00b300";
+document.getElementById("bt444").style.backgroundColor = "#00b300";
+document.getElementById("bt555").style.backgroundColor = "#c2d6d6";
+}
+else
+{
+  result3=bt555;
+document.getElementById("bt111").style.backgroundColor = "#004d00";
+document.getElementById("bt222").style.backgroundColor = "#004d00";
+document.getElementById("bt333").style.backgroundColor = "#004d00";
+document.getElementById("bt444").style.backgroundColor = "#004d00";
+document.getElementById("bt555").style.backgroundColor = "#004d00";
+}
+if((flag&&flag1&&flag2&&flag3)==1)
+{
+  enable();
+}
+}
+
+function clic3(a)
+{
+  flag2=1;
+if(a==1)
+{
+  result4=bt1111;
+document.getElementById("bt1111").style.backgroundColor =  "#ff0000";
+document.getElementById("bt2222").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt3333").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt4444").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt5555").style.backgroundColor = "#c2d6d6";
+}
+else if(a==2)
+{
+  result4=bt2222;
+document.getElementById("bt1111").style.backgroundColor = " #ff3300";
+document.getElementById("bt2222").style.backgroundColor = " #ff3300";
+document.getElementById("bt3333").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt4444").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt5555").style.backgroundColor = "#c2d6d6";
+}
+else if(a==3)
+{
+result4=bt3333;
+document.getElementById("bt1111").style.backgroundColor ="#ff9900";
+document.getElementById("bt2222").style.backgroundColor = "#ff9900";
+document.getElementById("bt3333").style.backgroundColor = "#ff9900";
+document.getElementById("bt4444").style.backgroundColor = "#c2d6d6";
+document.getElementById("bt5555").style.backgroundColor = "#c2d6d6";
+}
+else if(a==4)
+{
+  result4=bt4444;
+document.getElementById("bt1111").style.backgroundColor = "#00b300";
+document.getElementById("bt2222").style.backgroundColor = "#00b300";
+document.getElementById("bt3333").style.backgroundColor = "#00b300";
+document.getElementById("bt4444").style.backgroundColor = "#00b300";
+document.getElementById("bt5555").style.backgroundColor = "#c2d6d6";
+}
+else
+{
+ 
+document.getElementById("bt1111").style.backgroundColor = "#004d00";
+document.getElementById("bt2222").style.backgroundColor = "#004d00";
+document.getElementById("bt3333").style.backgroundColor = "#004d00";
+document.getElementById("bt4444").style.backgroundColor = "#004d00";
+document.getElementById("bt5555").style.backgroundColor = "#004d00";
+ result4=bt5555;
+}
+if((flag&&flag1&&flag2&&flag3)==1)
+{
+  enable();
+}
+}
+
+function enable()
+{
+  document.getElementById("next").disabled = false;
+}
+
+function cli()
+{
+
+console.log(result1.name);
+console.log(result2.name);
+console.log(result3.name);
+console.log(result4.name);
+}
+
+</script>
+</HEAD>
+
+  <body class="container">
+<section class="container">
+  <div id="fixedheader">
+<img src="logo1.png" height="40px" width="200px" alt="Bajaj Capital Logo">
+</div>
+<p class="p1" style="padding-top: 40px;"> Please rate your satisfaction on the following attributes of our service.</p> <section class="container">
+<div class="main">
+
+<p  style="font-size: 16px; padding-top: 20px; padding-bottom: 7px;">Responsivness</p>
+<table style="margin-left:0px">
+<tr  >
+<td style="text-align: center; font-size: 12px;">Extreamly Bad</td><td style="text-align: center; font-size: 12px;"> Bad</td><td style="text-align: center; font-size: 12px;">Neutral</td><td style="text-align: center; font-size: 12px;">Good</td><td style="text-align: center; font-size: 12px;">Extreamly Good</td>
+</tr>
+<tr>
+<td><input type="button" id="bt1"  name="Extreamly Bad" class="arrow_button_left" onclick="clic('1')"  ></td>
+<td> <input type="button" id="bt2" name="Bad" class="button1" onclick="clic('2')" ></td>
+<td><input type="button" id="bt3" name="Neutral" class="button1"onclick="clic('3')" ></td>
+<td><input type="button" id="bt4" name="Good" class="button1" onclick="clic('4')"></td>
+<td><input type="button" id="bt5"  name="Extreamly Good" class="arrow_button_right" onclick="clic('5')"></td>
+</tr>
+</table>
+</div>
+<div class="main">
+
+<p  style="font-size: 16px; padding-top: 20px; padding-bottom: 7px;">Competency in advising right solutions</p>
+<table style="margin-left:0px">
+<tr  >
+<td style="text-align: center; font-size: 12px;">Extreamly Bad</td><td style="text-align: center; font-size: 12px;"> Bad</td><td style="text-align: center; font-size: 12px;">Neutral</td><td style="text-align: center; font-size: 12px;">Good</td><td style="text-align: center; font-size: 12px;">Extreamly Good</td>
+</tr>
+<tr>
+<td><input type="button" id="bt11" name="Extreamly Bad" class="arrow_button_left" onclick="clic1('1')"  ></td>
+<td> <input type="button" id="bt22"  name="Bad"class="button1" onclick="clic1('2')" ></td>
+<td><input type="button" id="bt33" name="Neutral" class="button1"onclick="clic1('3')" ></td>
+<td><input type="button" id="bt44" name="Good" class="button1" onclick="clic1('4')"></td>
+<td><input type="button" id="bt55" name="Extreamly Good" class="arrow_button_right" onclick="clic1('5')"></td>
+</tr>
+</table>
+</div>
+<div class="main">
+
+<p  style="font-size: 16px; padding-top: 20px; padding-bottom: 7px;">Trustworthiness</p>
+<table style="margin-left:0px">
+<tr  >
+<td style="text-align: center; font-size: 12px;">Extreamly Bad</td><td style="text-align: center; font-size: 12px;"> Bad</td><td style="text-align: center; font-size: 12px;">Neutral</td><td style="text-align: center; font-size: 12px;">Good</td><td style="text-align: center; font-size: 12px;">Extreamly Good</td>
+</tr>
+<tr>
+<td><input type="button" id="bt111" name="Extreamly Bad" class="arrow_button_left" onclick="clic2('1')"  ></td>
+<td> <input type="button" id="bt222"  name="Bad"class="button1" onclick="clic2('2')" ></td>
+<td><input type="button" id="bt333" name="Neutral" class="button1"onclick="clic2('3')" ></td>
+<td><input type="button" id="bt444" name="Good" class="button1" onclick="clic2('4')"></td>
+<td><input type="button" id="bt555" name="Extreamly Good" class="arrow_button_right" onclick="clic2('5')"></td>
+</tr>
+</table>
+</div>
+<div class="main">
+
+<p  style="font-size: 16px; padding-top: 20px; padding-bottom: 7px;">Customer service and support</p>
+<table style="margin-left:0px">
+<tr  >
+<td style="text-align: center; font-size: 12px;">Extreamly Bad</td><td style="text-align: center; font-size: 12px;"> Bad</td><td style="text-align: center; font-size: 12px;">Neutral</td><td style="text-align: center; font-size: 12px;">Good</td><td style="text-align: center; font-size: 12px;">Extreamly Good</td>
+</tr>
+<tr>
+<td><input type="button" id="bt1111"  name="Extreamly Bad"class="arrow_button_left" onclick="clic3('1')"  ></td>
+<td> <input type="button" id="bt2222"  name="Bad"class="button1" onclick="clic3('2')" ></td>
+<td><input type="button" id="bt3333"  name="Neutral"class="button1"onclick="clic3('3')" ></td>
+<td><input type="button" id="bt4444" name="Good" class="button1" onclick="clic3('4')"></td>
+<td><input type="button" id="bt5555"  name="Extreamly Good"class="arrow_button_right" onclick="clic3('5')"></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="fixedfooter">
+<button  class="next" value="Next"name=" Next" id="next"    onclick="cli()" disabled >Next</button>
+<div class="black">
+  <p align="right">Powered by Bajaj Capital</p>
+</div>
+
+ </div>
+
+
+</section>
+</BODY>
+</HTML>
